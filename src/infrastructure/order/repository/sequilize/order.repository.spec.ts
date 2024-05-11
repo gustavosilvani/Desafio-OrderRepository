@@ -284,7 +284,7 @@ describe("Order repository test", () => {
     await orderRepository.create(order2);
     await orderRepository.create(order3);
 
-    const ordersModel = await OrderModel.findAll({
+    const ordersModel = await OrderRepository.findAll({
       include: ["items"],
     });
 
